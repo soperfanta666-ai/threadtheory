@@ -13,11 +13,10 @@ export const Header = () => {
   const { getItemCount, toggleCart } = useCart()
   const itemCount = getItemCount()
 
-  const categoryItems = [
-    { name: 'Cargo Trousers', query: 'Cargo' },
+ const categoryItems = [
+    { name: 'T-Shirts', query: 'T-Shirts' },
+    { name: 'Shorts', query: 'Shorts' },
     { name: 'Trousers', query: 'Trousers' },
-    { name: 'Shirts', query: 'Shirts' },
-    { name: 'Jeans', query: 'Jeans' },
   ]
 
   return (

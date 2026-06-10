@@ -74,7 +74,7 @@ export const CartDrawer = () => {
                       <p className="text-xs text-muted-foreground mt-1">
                         Size: {item.size} · Color: {item.color}
                       </p>
-                      <p className="text-sm font-medium text-foreground mt-2">${item.price}</p>
+                      <p className="text-sm font-medium text-foreground mt-2">Rs. {item.price.toLocaleString()}</p>
 
                       {/* Quantity Controls */}
                       <div className="flex items-center gap-2 mt-3">
@@ -116,7 +116,7 @@ export const CartDrawer = () => {
               <div className="border-t border-border p-6 space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-foreground">Total:</span>
-                  <span className="text-2xl font-bold text-foreground">${getTotal().toFixed(2)}</span>
+                  <span className="text-2xl font-bold text-foreground">Rs. {getTotal().toLocaleString()}</span>
                 </div>
                 <Link
                   href="/checkout"
