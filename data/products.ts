@@ -39,7 +39,7 @@ export const products: Product[] = [
     originalPrice: 3200,
     category: 'Shorts',
     images: [
-      '/products/cargo-shorts-khaki.png',
+      '/products/cargo-shorts-normal.png',
       '/products/cargo-shorts-white.png',
       '/products/cargo-shorts-green.png',
       '/products/cargo-shorts-black.png',
