@@ -25,13 +25,15 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image 
-              src="/logo.png" 
-              alt="Thread & Theory Logo" 
-              width={40} 
-              height={40}
-              className="w-10 h-10 dark:invert"
-            />
+            <div className="rounded-xl bg-foreground/5 dark:bg-white/10 p-1.5">
+              <Image
+                src="/products/logo.png"
+                alt="Thread & Theory Logo"
+                width={48}
+                height={48}
+                className="w-12 h-12 dark:invert"
+              />
+            </div>
             <span className="text-2xl font-bold text-foreground tracking-tight">Thread & Theory</span>
           </Link>
 

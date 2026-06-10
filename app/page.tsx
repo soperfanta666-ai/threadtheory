@@ -5,7 +5,7 @@ import { ProductCard } from '@/components/ProductCard'
 import { products } from '@/data/products'
 
 export default function Page() {
-  const featuredProducts = products.slice(0, 4)
+  const featuredProducts = products.filter(p => !p.outOfStockMessage).slice(0, 4)
 
   return (
     <>

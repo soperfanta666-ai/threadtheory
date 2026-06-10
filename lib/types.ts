@@ -20,6 +20,7 @@ export interface Product {
     hex: string
   }>
   description: string
+  outOfStockMessage?: string
 }
 
 export interface CartItem {

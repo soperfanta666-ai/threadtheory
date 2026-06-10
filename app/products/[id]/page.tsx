@@ -31,6 +31,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
   }, [product, router])
 
   useEffect(() => {
+    if (product?.outOfStockMessage) {
+      toast.error(product.outOfStockMessage, { duration: 6000 })
+    }
+  }, [])
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 0) {
@@ -111,16 +117,22 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
 
-      {/* Sale Banner */}
-      <div className="bg-red-500 text-white rounded-lg px-6 py-3 mb-10 flex flex-col sm:flex-row items-center justify-between gap-2">
-        <p className="font-bold text-lg">🔥 Sitewide Sale — {discount}% OFF</p>
-        <div className="flex items-center gap-2 text-sm font-semibold">
-          <span>Hurry! Sale ends in:</span>
-          <span className="bg-white text-red-500 rounded px-2 py-0.5 font-mono text-base">
-            {pad(hours)}:{pad(minutes)}:{pad(seconds)}
-          </span>
+      {product.outOfStockMessage ? (
+        <div className="bg-gray-800 text-white rounded-lg px-6 py-4 mb-10 flex items-center justify-center gap-3">
+          <span className="text-xl">⚠️</span>
+          <p className="font-semibold text-base">{product.outOfStockMessage}</p>
         </div>
-      </div>
+      ) : (
+        <div className="bg-red-500 text-white rounded-lg px-6 py-3 mb-10 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="font-bold text-lg">🔥 Sitewide Sale — {discount}% OFF</p>
+          <div className="flex items-center gap-2 text-sm font-semibold">
+            <span>Hurry! Sale ends in:</span>
+            <span className="bg-white text-red-500 rounded px-2 py-0.5 font-mono text-base">
+              {pad(hours)}:{pad(minutes)}:{pad(seconds)}
+            </span>
+          </div>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Gallery */}
@@ -196,14 +208,14 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
           {/* Add to Cart */}
           <button
             onClick={handleAddToCart}
-            disabled={!selectedSize || !selectedColor || maxQty === 0}
+            disabled={!!product.outOfStockMessage || !selectedSize || !selectedColor || maxQty === 0}
             className={`w-full py-4 rounded-lg font-semibold text-lg transition-all ${
-              selectedSize && selectedColor && maxQty > 0
+              !product.outOfStockMessage && selectedSize && selectedColor && maxQty > 0
                 ? 'bg-primary text-primary-foreground hover:opacity-90'
                 : 'bg-muted text-muted-foreground cursor-not-allowed'
             }`}
           >
-            {maxQty === 0 ? 'Out of Stock' : 'Add to Cart'}
+            {product.outOfStockMessage ? 'Out of Stock' : maxQty === 0 ? 'Out of Stock' : 'Add to Cart'}
           </button>
 
           {/* Shipping & Materials */}
