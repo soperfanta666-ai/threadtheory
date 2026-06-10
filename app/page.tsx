@@ -5,7 +5,7 @@ import { ProductCard } from '@/components/ProductCard'
 import { products } from '@/data/products'
 
 export default function Page() {
-  const featuredProducts = products.filter(p => !p.outOfStockMessage).slice(0, 4)
+  const featuredProducts = products.filter(p => !p.outOfStockMessage).slice(0, 6)
 
   return (
     <>
@@ -19,7 +19,7 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

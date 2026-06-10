@@ -14,9 +14,12 @@ export const Header = () => {
   const itemCount = getItemCount()
 
  const categoryItems = [
-    { name: 'Shirts', query: 'Shirts' },
-    { name: 'Shorts', query: 'Shorts' },
-    { name: 'Trousers', query: 'Trousers' },
+    { name: 'Shirts',      query: 'Shirts' },
+    { name: 'Shorts',      query: 'Shorts' },
+    { name: 'Trousers',    query: 'Trousers' },
+    { name: 'Jeans',       query: 'Jeans' },
+    { name: 'Hoodies',     query: 'Hoodies' },
+    { name: 'Jackets',     query: 'Jackets' },
     { name: 'Accessories', query: 'Accessories' },
   ]
 
