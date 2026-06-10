@@ -31,13 +31,13 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/products?category=Cargo" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Cargo
+                <Link href="/products?category=Shirts" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Shirts
                 </Link>
               </li>
               <li>
-                <Link href="/products?category=Jeans" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Jeans
+                <Link href="/products?category=Accessories" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Accessories
                 </Link>
               </li>
             </ul>

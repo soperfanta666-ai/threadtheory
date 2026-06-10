@@ -6,7 +6,7 @@ export const products: Product[] = [
     name: 'Drop Shoulder T-Shirt',
     basePrice: 1499,
     originalPrice: 2000,
-    category: 'T-Shirts',
+    category: 'Shirts',
     images: [
       '/products/drop-shoulder-black.png',
       '/products/drop-shoulder-white.png',
@@ -139,7 +139,7 @@ export const products: Product[] = [
     name: 'Polo Shirt',
     basePrice: 1799,
     originalPrice: 2400,
-    category: 'Polo',
+    category: 'Shirts',
     images: ['/products/polo-shirt.png'],
     sizePrices: [
       { size: 'S',   price: 1599, stock: null },
@@ -155,5 +155,28 @@ export const products: Product[] = [
     ],
     description: 'A premium polo shirt with a clean collar and comfortable fit, perfect for everyday smart wear.',
     outOfStockMessage: 'Out of stock — please re-check by Monday, 15/06/2026',
+  },
+  {
+    id: '7',
+    name: 'Leather Belt',
+    basePrice: 3750,
+    originalPrice: 4999,
+    category: 'Accessories',
+    images: [
+      '/products/belt-black.png',
+      '/products/belt-brown.png',
+    ],
+    sizePrices: [
+      { size: 'S',   price: 3750, stock: null },
+      { size: 'M',   price: 3750, stock: null },
+      { size: 'L',   price: 3750, stock: null },
+      { size: 'XL',  price: 3750, stock: null },
+      { size: 'XXL', price: 3750, stock: null },
+    ],
+    colors: [
+      { name: 'Black', hex: '#1C1C1C' },
+      { name: 'Brown', hex: '#8B4513' },
+    ],
+    description: 'Premium leather belt with a polished buckle — a versatile accessory for both formal and casual wear.',
   },
 ]
