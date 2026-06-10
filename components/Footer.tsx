@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="bg-foreground text-white py-12 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -53,36 +53,14 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="https://wa.me/923006302324" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Contact
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Privacy Policy
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Connect */}
-          <div>
-            <h4 className="font-semibold mb-4">Connect</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Email
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
