@@ -28,8 +28,7 @@ export const CartDrawer = () => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed right-0 top-0 h-full w-full max-w-md bg-white/95 backdrop-blur-md z-50 flex flex-col"
-          >
+className="fixed right-0 top-0 h-full w-full max-w-md bg-background/95 backdrop-blur-md z-50 flex flex-col"          >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-border">
               <h2 className="text-2xl font-bold text-foreground">Cart</h2>

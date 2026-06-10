@@ -26,7 +26,7 @@ export const SizeSelector = ({ sizePrices, selected, onSelect }: SizeSelectorPro
                   ? 'border-border bg-muted text-muted-foreground cursor-not-allowed opacity-50'
                   : selected === size
                   ? 'border-primary bg-primary text-primary-foreground'
-                  : 'border-border bg-white text-foreground hover:border-primary'
+                  : 'border-border bg-background text-foreground hover:border-primary'
               }`}
             >
               <span className="block">{size}</span>
