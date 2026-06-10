@@ -23,18 +23,16 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-40 bg-background/80 dark:bg-foreground/5 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="rounded-xl bg-foreground/5 dark:bg-white/10 p-1.5">
-              <Image
-                src="/products/logo.png"
-                alt="Thread & Theory Logo"
-                width={48}
-                height={48}
-                className="w-12 h-12 dark:invert"
-              />
-            </div>
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/products/logo.png"
+              alt="Thread & Theory Logo"
+              width={64}
+              height={64}
+              className="w-16 h-16 mix-blend-multiply dark:invert dark:mix-blend-screen"
+            />
             <span className="text-2xl font-bold text-foreground tracking-tight">Thread & Theory</span>
           </Link>
 
