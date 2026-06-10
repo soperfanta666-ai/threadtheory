@@ -24,7 +24,13 @@ export const Header = () => {
   ]
 
   return (
-    <header className="sticky top-0 z-40 bg-background/80 dark:bg-foreground/5 backdrop-blur-md border-b border-border">
+    <header className="sticky top-0 z-40">
+      {/* Announcement Bar */}
+      <div className="bg-primary text-primary-foreground text-center text-xs sm:text-sm py-2 px-4">
+        🔥 Sitewide Sale — Up to 30% OFF &nbsp;·&nbsp; Free delivery on orders over Rs. 5,000
+      </div>
+
+      <div className="bg-background/80 dark:bg-foreground/5 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -133,6 +139,7 @@ export const Header = () => {
             </Link>
           </nav>
         )}
+      </div>
       </div>
     </header>
   )

@@ -206,31 +206,6 @@ export const products: Product[] = [
     description: 'Relaxed oversized hoodie in premium fleece — perfect for layering or wearing on its own.',
   },
   {
-    id: '9',
-    name: 'Denim Jacket',
-    basePrice: 4499,
-    originalPrice: 6000,
-    category: 'Jackets',
-    images: [
-      'https://plus.unsplash.com/premium_photo-1727942421760-624e3e958b5e?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1537465978529-d23b17165b3b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=800&q=80',
-    ],
-    sizePrices: [
-      { size: 'S',   price: 4299, stock: null },
-      { size: 'M',   price: 4499, stock: null },
-      { size: 'L',   price: 4699, stock: null },
-      { size: 'XL',  price: 4899, stock: null },
-      { size: 'XXL', price: 4999, stock: null },
-    ],
-    colors: [
-      { name: 'Light Blue', hex: '#89B4D8' },
-      { name: 'Dark Blue',  hex: '#1E3A5F' },
-      { name: 'Black',      hex: '#1C1C1C' },
-    ],
-    description: 'Classic denim jacket with a tailored fit — a wardrobe essential that pairs with everything.',
-  },
-  {
     id: '10',
     name: 'Slim Fit Chinos',
     basePrice: 2799,
